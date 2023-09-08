@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 from faker import Faker
 import random
 
@@ -48,9 +49,3 @@ if __name__ == '__main__':
                 comment=fake.sentence(),
                 game_id=game.id,
             )
-
-            reviews.append(review)
-
-    session.bulk_save_objects(reviews)
-    session.commit()
-    session.close()
